@@ -1,10 +1,4 @@
 /* may still need to change sizing on gifs*/
-body {
-    text-align: center;
-    margin: auto;
-    background-size: auto;
-    font-family: 'Alegreya Sans', sans-serif;
-}
 header {
     letter-spacing: 4px;
     color:pink;
@@ -14,9 +8,16 @@ header {
     font-size: 40px;
     background-image: url("../images/bling.jpg");
     border-bottom: grey solid 2px;
-    border-radius: 15px;
+    border-radius: 10px;
     width: 100%;
 }
+body {
+    text-align: center;
+    margin: auto;
+    background-size: auto;
+    font-family: 'Alegreya Sans', sans-serif;
+}
+
 #time-left {
     font-weight: bold;
     font-size: 30px;
