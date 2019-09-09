@@ -7,7 +7,7 @@
 window.onload = function() {
     $("#start-button").on("click", stopwatch.start);
     $(".choice").on("click", stopwatch.correctCount);
-    $("#done-button").on("click", stopwatch.stop);
+    $("#check-button").on("click", stopwatch.stop);
     $("#restart-button").on("click", stopwatch.reset);
 };
 
@@ -64,14 +64,15 @@ var stopwatch = {
         clearInterval(intervalId);
         clockRunning = false;
 
-        //instead of the remaining time, the score is displayed in the header
+        //changes remaining time to score out of /8
         $("#time-left").html("Score:" + correctAnswers + "/8");
     },
-
-    //function initialized in the start function, counts down in intervals of 1000 ms
+//could add a pop up gif message 
+   
+//function initialized in the start function, counts down in intervals of 1000 ms
     count: function() {
 
-        //as long as there is still time left on the clock, keep counting down
+        //keeps counting if time on clock remains 
         if (stopwatch.time > 0) {
             stopwatch.time--;
             var converted = stopwatch.timeConverter(stopwatch.time);
@@ -85,6 +86,7 @@ var stopwatch = {
             stopwatch.stop();
         }
     },
+//could add sound when clock runs out
 
     // Had to make function so time displayed in mins/sec
     timeConverter: function(t) {

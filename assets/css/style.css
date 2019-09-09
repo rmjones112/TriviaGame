@@ -1,9 +1,9 @@
-
+/* may still need to change sizing on gifs*/
 body {
     text-align: center;
     margin: auto;
-    background-image: pink;
     background-size: auto;
+    font-family: 'Alegreya Sans', sans-serif;
 }
 header {
     letter-spacing: 4px;
@@ -11,7 +11,6 @@ header {
     text-shadow: 2px 2px 2px black;
     position: fixed;
     top: 0px;
-    font-family: 'Alegreya Sans', sans-serif;
     font-size: 40px;
     background-image: url("../images/bling.jpg");
     border-bottom: grey solid 2px;
@@ -34,7 +33,6 @@ h1 {
 }
 .button {
     letter-spacing: 2px;
-    font-family: 'Alegreya Sans', sans-serif;
     color: white;
     text-shadow: 2px 2px 2px black;
     background: pink;
@@ -44,7 +42,7 @@ h1 {
     border-bottom: grey solid 2px;
     border-right: grey solid 2px;
 }
-#done-button {
+#check-button {
     margin: 0px 0px 60px 0px;
 }
 #start-button {
@@ -52,7 +50,6 @@ h1 {
 }
 #restart-button {
     letter-spacing: 2px;
-    font-family: 'Alegreya Sans', sans-serif;
     color: white;
     text-shadow: 2px 2px 2px black;
     background: pink;
