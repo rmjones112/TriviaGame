@@ -13,7 +13,9 @@ window.onload = function() {
 
 //creating the initial glabal variables
 var intervalId;
-var clockRunning = false;
+
+//wtiting out more to explain for myself, this is set as a boolean 
+var clockGoing = false; 
 var correctAnswers = 0;
 
 // stopwatch object which contains the clock functions
@@ -26,7 +28,7 @@ var stopwatch = {
     correctCount: function() {
         
         //checks the selection that is clicked on for the value "correct"
-        if (clockRunning) {
+        if (clockGoing) {
             var selection = $(this).val().trim();
             if (selection === "correct" && correctAnswers < 8) {
                 correctAnswers++
@@ -40,7 +42,7 @@ var stopwatch = {
 
     },
 
-    //reset function 
+    //reset function from yt tutorial, find link 
     reset: function() {
 
         //the time and score reset, clock stops, and choices are deselected
@@ -53,16 +55,16 @@ var stopwatch = {
 
     //function that starts the countdown clock
     start: function() {
-        if (!clockRunning) {
+        if (!clockGoing) {
             intervalId = setInterval(stopwatch.count, 1000);
-            clockRunning = true;
+            clockGoing = true;
         }
     },
 
     //function that stops the countdown clock and ends the game
     stop: function() {
         clearInterval(intervalId);
-        clockRunning = false;
+        clockGoing = false;
 
         //changes remaining time to score out of /8
         $("#time-left").html("Score:" + correctAnswers + "/8");
@@ -87,6 +89,7 @@ var stopwatch = {
         }
     },
 //could add sound when clock runs out
+//have to add sound file, or maybe youtube clip 
 
     // Had to make function so time displayed in mins/sec
     timeConverter: function(t) {
